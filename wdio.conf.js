@@ -1,0 +1,80 @@
+const host = '0.0.0.0';
+const port = 4723;
+
+const waitforTimeout = 30 * 60000;
+const commandTimeout = 30 * 60000;
+
+exports.config = {
+    deprecationWarnings: false,
+    debug: true,
+
+    specs: ['./integration/main-spec.js'],
+
+    host: host,
+    port: port,
+
+    maxInstances: 1,
+
+    capabilities: [
+        {
+            appiumVersion: '1.13.0',
+            platformName: 'Android',
+            platformVersion: '8.0',
+            app: '/home/oleg/Desktop/appium-webdriverio5/app-debug.apk',
+            deviceName: 'emulator-5554',
+            waitforTimeout: waitforTimeout,
+            commandTimeout: commandTimeout,
+            appWaitDuration: 30 * 60000,
+            dbExecTimeout: 30 * 60000,
+            androidInstallTimeout: 30 * 60000,
+            newCommandTimeout: 60000,
+            noReset: true,
+            fullReset: false,
+            appWaitActivity: "com.tns.NativeScriptActivity",
+            appActivity: 'com.tns.NativeScriptActivity',
+            appPackage: 'com.Meditation.app',
+            adbExecTimeout: 80000,
+            avdLaunchTimeout: 30*300000,
+            disableWindowAnimation: true,
+        },
+    ],
+
+    services: ['appium'],
+
+    reporters: ['spec'],
+
+    appium: {
+        waitStartTime: 10000,
+        waitforTimeout: waitforTimeout,
+        command: 'appium',
+        logFileName: './appium.log',
+        args: {
+            address: host,
+            port: port,
+            commandTimeout: commandTimeout,
+            sessionOverride: true,
+            debugLogSpacing: true
+        },
+    },
+
+    logLevel: 'silent',
+    coloredLogs: true,
+    allScriptsTimeout: 140000,
+    getPageTimeout: 140000,
+
+
+    framework: 'jasmine',
+    jasmineNodeOpts: {
+        showColors: true,
+        defaultTimeoutInterval: 60000,
+    },
+
+
+    onPrepare: function () {
+        console.log('<<< NATIVE APP TESTS STARTED >>>');
+    },
+
+    onComplete: function () {
+        console.log('<<< TESTING FINISHED >>>');
+    }
+};

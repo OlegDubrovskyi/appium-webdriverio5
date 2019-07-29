@@ -1,0 +1,12 @@
+
+./node_modules
+
+**/.idea/ 
+
+package-lock.json
+
+# appium typeScript
+./typeScript
+
+# appium log
+appium.log
