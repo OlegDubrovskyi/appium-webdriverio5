@@ -8,7 +8,7 @@ exports.config = {
     deprecationWarnings: false,
     debug: true,
 
-    specs: ['./integration/main-spec.js'],
+    specs: ['./integration/*.ts'],
 
     host: host,
     port: port,
@@ -28,23 +28,22 @@ exports.config = {
             dbExecTimeout: 30 * 60000,
             androidInstallTimeout: 30 * 60000,
             newCommandTimeout: 60000,
-            noReset: true,
+            noReset: false,
             fullReset: false,
             appWaitActivity: "com.tns.NativeScriptActivity",
             appActivity: 'com.tns.NativeScriptActivity',
             appPackage: 'com.Meditation.app',
             adbExecTimeout: 80000,
             avdLaunchTimeout: 30*300000,
-            disableWindowAnimation: true,
         },
     ],
 
-    services: ['appium'],
-
     reporters: ['spec'],
 
+    services: ['appium'],
+
     appium: {
-        waitStartTime: 10000,
+        waitStartTime: 6000,
         waitforTimeout: waitforTimeout,
         command: 'appium',
         logFileName: './appium.log',
@@ -69,6 +68,9 @@ exports.config = {
         defaultTimeoutInterval: 60000,
     },
 
+    before: function() {
+        require('ts-node').register({ files: true });
+    },
 
     onPrepare: function () {
         console.log('<<< NATIVE APP TESTS STARTED >>>');
