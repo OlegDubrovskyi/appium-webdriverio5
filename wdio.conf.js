@@ -1,4 +1,4 @@
-const host = '127.0.0.1';
+const host = '10.0.0.200';
 const port = 4723;
 
 const waitforTimeout = 30 * 60000;
