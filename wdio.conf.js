@@ -21,7 +21,7 @@ exports.config = {
             appiumVersion: '1.14.1',
             platformName: 'Android',
             platformVersion: '8.0',
-            app: '/home/oleg/Desktop/appium-webdriverio5/app-debug.apk',
+            app: '/bitrise/src/app-debug.apk',
             deviceName: 'emulator-5554',
             waitforTimeout: waitforTimeout,
             commandTimeout: commandTimeout,
