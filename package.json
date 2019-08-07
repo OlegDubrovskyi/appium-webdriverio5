@@ -19,7 +19,7 @@
     "@wdio/spec-reporter": "^5.11.7",
     "@wdio/sync": "5.11.10",
     "@wdio/appium-service": "5.11.4",
-    "appium": "1.15",
+    "appium": "1.15.0-fake.303",
     "jasmine": "3.4.0",
     "jasmine-spec-reporter": "4.2.1",
     "ts-node": "6.2.0",
