@@ -22,22 +22,22 @@ fdescribe('Tests for registration',  () => {
             alertPage.safeClick(alertPage.alertOk);
         });
 
-        it('Verify registration with empty password',  async () => {
+        it('Verify registration with empty password',  () => {
             signUpPage.fillSignUpInputs('test@test.com', '');
             alertPage.assertAlertText('Password is required', 'Password cannot be set empty');
         });
 
-        it('Verify registration short password',  async () => {
+        it('Verify registration short password',   () => {
             signUpPage.fillSignUpInputs('test@test.com', 't');
             alertPage.assertAlertText('Invalid format', 'Your password must have from 4 to 15 characters');
         });
 
-        it('Verify registration long password',  async () => {
+        it('Verify registration long password',   () => {
             signUpPage.fillSignUpInputs('test@test.com', 'ttttttttttttttttt');
             alertPage.assertAlertText('Invalid format', 'Your password must have from 4 to 15 characters');
         });
 
-        it('Verify registration with incorrect email',  async () => {
+        it('Verify registration with incorrect email',   () => {
             signUpPage.fillSignUpInputs('-', 'tttt');
             alertPage.assertAlertText('Invalid email address', 'Please enter a valid email address format.');
         });
@@ -54,7 +54,7 @@ fdescribe('Tests for registration',  () => {
             myPlacePage.safeClick(myPlacePage.userImg);
         });
 
-        it('Verify registration from SignUp page',  async () => {
+        it('Verify registration from SignUp page',   () => {
             randomEmail = signUpPage.getRandomEmail('autotest@test.net');
             signUpPage.fillSignUpInputs(randomEmail, '1234');
             alertPage.assertAlertText('Account created', 'Your account has been created.');
@@ -64,7 +64,7 @@ fdescribe('Tests for registration',  () => {
             profilePage.assertElementContainsText(profilePage.accountUserEmail, randomEmail)
         });
 
-        it('Verify registration from LogIn page',  async () => {
+        it('Verify registration from LogIn page',   () => {
             randomEmail = signUpPage.getRandomEmail('autotest@test.net');
             signUpPage.safeClick(signUpPage.goToLogInLink);
             logInPage.fillLogInpInputs(randomEmail, '1234');

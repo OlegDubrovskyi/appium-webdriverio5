@@ -20,7 +20,7 @@ describe('tests for login',  () => {
         myPlacePage.safeClick(myPlacePage.userImg);
     });
 
-    it('Verify that user can login successfully from logIn form',  async () => {
+    it('Verify that user can login successfully from logIn form',  () => {
         logInPage.safeClick(signUpPage.goToLogInLink);
         logInPage.fillLogInpInputs('oleg.dubrovsky@valor-software.com', '1234');
         myPlacePage.safeClick(myPlacePage.userImg);
@@ -28,7 +28,7 @@ describe('tests for login',  () => {
         profilePage.assertElementContainsText(profilePage.accountUserEmail, 'oleg.dubrovsky@valor-software.com')
     });
 
-    it('Verify that user can login successfully from signIn form',  async () => {
+    it('Verify that user can login successfully from signIn form',   () => {
         signUpPage.fillSignUpInputs('oleg.dubrovsky@valor-software.com', '1234');
         alertPage.assertAlertText('Account already exists', 'Looks like you already have an account with this email address! Do you want to log in with this account?');
         alertPage.safeClick(alertPage.alertOk);
