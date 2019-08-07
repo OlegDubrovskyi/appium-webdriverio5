@@ -17,7 +17,8 @@ exports.config = {
 
     capabilities: [
         {
-            appiumVersion: '1.13.0',
+            automationName: 'UiAutomator2',
+            appiumVersion: '1.14.1',
             platformName: 'Android',
             platformVersion: '8.0',
             app: '/home/oleg/Desktop/appium-webdriverio5/app-debug.apk',
@@ -29,12 +30,13 @@ exports.config = {
             androidInstallTimeout: 30 * 60000,
             newCommandTimeout: 60000,
             noReset: false,
-            fullReset: false,
+            fullReset: true,
             appWaitActivity: "com.tns.NativeScriptActivity",
             appActivity: 'com.tns.NativeScriptActivity',
             appPackage: 'com.Meditation.app',
             adbExecTimeout: 80000,
             avdLaunchTimeout: 30*300000,
+            disableWindowAnimation: true
         },
     ],
 

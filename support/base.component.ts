@@ -6,6 +6,12 @@ export class BaseComponent {
         element.click();
     }
 
+    sendKeys(element: WebdriverIO.Element, value: any) {
+        element.waitForDisplayed(timeout);
+        element.clearValue();
+        element.addValue(value);
+    }
+
     safeClickByFirst(element: WebdriverIO.Element[]) {
         element[0].waitForDisplayed(timeout);
         element[0].click();
@@ -22,7 +28,7 @@ export class BaseComponent {
     }
 
     assertElementContainsText(element: WebdriverIO.Element, text: string) {
-        expect(element.getText()).toContain(text)
+        expect(element.getText()).toContain(text);
     }
 
     scrollByDirection(direction: string) {
