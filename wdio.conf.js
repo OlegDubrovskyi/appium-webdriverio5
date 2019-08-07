@@ -30,11 +30,11 @@ exports.config = {
             androidInstallTimeout: 30 * 60000,
             newCommandTimeout: 60000,
             noReset: false,
-            fullReset: true,
+            fullReset: false,
             appWaitActivity: "com.tns.NativeScriptActivity",
             appActivity: 'com.tns.NativeScriptActivity',
             appPackage: 'com.Meditation.app',
-            adbExecTimeout: 80000,
+            adbExecTimeout: 20*80000,
             avdLaunchTimeout: 30*300000,
             disableWindowAnimation: true
         },
