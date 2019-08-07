@@ -1,3 +1,6 @@
+const host = '0.0.0.0';
+const port = 4723;
+
 const waitforTimeout = 30 * 60000;
 const commandTimeout = 30 * 60000;
 
@@ -6,7 +9,10 @@ exports.config = {
     debug: true,
 
     specs: ['./integration/*.ts'],
-    
+
+    host: host,
+    port: port,
+
     maxInstances: 1,
 
     capabilities: [
@@ -36,6 +42,8 @@ exports.config = {
 
     reporters: ['spec'],
 
+    services: ['appium'],
+    
     logLevel: 'silent',
     coloredLogs: true,
     allScriptsTimeout: 140000,
