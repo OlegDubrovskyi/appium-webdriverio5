@@ -1,5 +1,5 @@
 const host = '0.0.0.0';
-const port = 4723;
+const port = 4725;
 
 const waitforTimeout = 30 * 60000;
 const commandTimeout = 30 * 60000;
@@ -34,7 +34,7 @@ exports.config = {
             appWaitActivity: "com.tns.NativeScriptActivity",
             appActivity: 'com.tns.NativeScriptActivity',
             appPackage: 'com.Meditation.app',
-            adbExecTimeout: 20*80000,
+            adbExecTimeout: 120000,
             avdLaunchTimeout: 30*300000,
             disableWindowAnimation: true
         },
