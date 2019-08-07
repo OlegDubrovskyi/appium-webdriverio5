@@ -18,7 +18,7 @@ exports.config = {
     capabilities: [
         {
             automationName: 'UiAutomator2',
-            appiumVersion: '1.13',
+            appiumVersion: '1.14.1',
             platformName: 'Android',
             platformVersion: '9',
             app: '/bitrise/src/app-debug.apk',
