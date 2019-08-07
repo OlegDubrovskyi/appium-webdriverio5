@@ -1,5 +1,5 @@
-const host = '0.0.0.0';
-const port = 4725;
+const host = '172.17.0.1';
+const port = 4723;
 
 const waitforTimeout = 30 * 60000;
 const commandTimeout = 30 * 60000;
