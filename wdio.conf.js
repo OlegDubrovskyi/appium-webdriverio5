@@ -1,4 +1,4 @@
-const host = '0.0.0.0';
+const host = '127.0.0.1';
 const port = 4723;
 
 const waitforTimeout = 30 * 60000;
@@ -22,6 +22,7 @@ exports.config = {
             platformName: 'Android',
             platformVersion: '9',
             app: '/bitrise/src/app-debug.apk',
+            // app: '/home/oleg/Desktop/appium-webdriverio5/app-debug.apk',
             deviceName: 'emulator-5554',
             waitforTimeout: waitforTimeout,
             commandTimeout: commandTimeout,
@@ -36,13 +37,14 @@ exports.config = {
             appPackage: 'com.Meditation.app',
             adbExecTimeout: 120000,
             avdLaunchTimeout: 30*300000,
-            disableWindowAnimation: true
+            disableWindowAnimation: true,
+            isHeadless: true,
+            skipUnlock: true
         },
     ],
 
     reporters: ['spec'],
 
-    services: ['appium'],
     
     logLevel: 'silent',
     coloredLogs: true,
