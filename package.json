@@ -2,7 +2,7 @@
   "name": "appium-config",
   "version": "1.0.0",
   "scripts": {
-    "appium": "appium",
+    "appium": "appium -a 127.0.0.1 -p 4727",
     "build": "tsc -p ./tsconfig.json",
     "e2e-tests": "npm run build && ./node_modules/.bin/wdio wdio.conf.js"
   },
