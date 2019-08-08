@@ -1,4 +1,4 @@
-const timeout = 10000;
+const timeout = 30000;
 
 export class BaseComponent {
     safeClick(element: WebdriverIO.Element) {
