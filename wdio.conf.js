@@ -1,5 +1,5 @@
 const host = '127.0.0.1';
-const port = 4723;
+const port = 4727;
 
 const waitforTimeout = 30 * 60000;
 const commandTimeout = 30 * 60000;
@@ -45,7 +45,22 @@ exports.config = {
 
     reporters: ['spec'],
 
-    
+    services: ['appium'],
+
+    appium: {
+        waitStartTime: 6000,
+        waitforTimeout: waitforTimeout,
+        command: 'appium',
+        logFileName: './appium.log',
+        args: {
+            address: host,
+            port: port,
+            commandTimeout: commandTimeout,
+            sessionOverride: true,
+            debugLogSpacing: true
+        },
+    },
+
     logLevel: 'silent',
     coloredLogs: true,
     allScriptsTimeout: 140000,

@@ -2,6 +2,7 @@
   "name": "appium-config",
   "version": "1.0.0",
   "scripts": {
+    "appium": "appium",
     "build": "tsc -p ./tsconfig.json",
     "e2e-tests": "npm run build && ./node_modules/.bin/wdio wdio.conf.js"
   },
@@ -19,6 +20,7 @@
     "@wdio/sync": "5.11.10",
     "@wdio/appium-service": "5.11.4",
     "jasmine": "3.4.0",
+    "appium": "1.14.1",
     "jasmine-spec-reporter": "4.2.1",
     "ts-node": "6.2.0",
     "tslint": "5.18.0",
