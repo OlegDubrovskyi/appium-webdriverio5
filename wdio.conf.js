@@ -8,7 +8,7 @@ exports.config = {
     deprecationWarnings: false,
     debug: true,
 
-    specs: ['./integration/*.ts'],
+    specs: ['./integration/login.spec.ts'],
 
     host: host,
     port: port,
@@ -21,7 +21,7 @@ exports.config = {
             appiumVersion: '1.14.1',
             platformName: 'Android',
             platformVersion: '9',
-            app: '/bitrise/src/app-debug.apk',
+            app: 'C:\\Users\\AlyonaOleg\\Desktop\\appium-webdriverio5\\app-debug.apk',
             deviceName: 'emulator-5554',
             waitforTimeout: waitforTimeout,
             commandTimeout: commandTimeout,
@@ -42,7 +42,23 @@ exports.config = {
 
     reporters: ['spec'],
 
+    sync: true,
+
     services: ['appium'],
+
+    appium: {
+        waitStartTime: 6000,
+        waitforTimeout: waitforTimeout,
+        command: 'appium.cmd',
+        logFileName: './appium.log',
+        args: {
+            address: host,
+            port: port,
+            commandTimeout: commandTimeout,
+            sessionOverride: true,
+            debugLogSpacing: true
+        },
+    },
     
     logLevel: 'silent',
     coloredLogs: true,

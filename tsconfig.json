@@ -11,7 +11,7 @@
     "noImplicitAny": false,
     "outDir": "typeScript",
     "typeRoots": [ "node_modules/@types" ],
-    "types": ["node", "jasmine", "@wdio/sync", "@wdio/jasmine-framework"]
+    "types": ["node", "jasmine", "webdriverio", "@wdio/jasmine-framework"]
 
   },
 
