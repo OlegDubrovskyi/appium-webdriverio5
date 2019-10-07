@@ -21,7 +21,7 @@ exports.config = {
             appiumVersion: '1.14.1',
             platformName: 'Android',
             platformVersion: '9',
-            app: '/bitrise/src/app-debug.apk',
+            app: './app-debug.apk',
             deviceName: 'emulator-5554',
             waitforTimeout: waitforTimeout,
             commandTimeout: commandTimeout,
@@ -43,7 +43,7 @@ exports.config = {
     reporters: ['spec'],
 
     services: ['appium'],
-    
+
     logLevel: 'silent',
     coloredLogs: true,
     allScriptsTimeout: 140000,
