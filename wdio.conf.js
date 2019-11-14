@@ -73,7 +73,9 @@ exports.config = {
     },
 
     before: function() {
-        require('ts-node').register({ files: true });
+        require('ts-node').register({
+            project: require('path').join(__dirname, './tsconfig.json')
+        });
     },
 
     onPrepare: function () {
