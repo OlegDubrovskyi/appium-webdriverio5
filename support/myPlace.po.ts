@@ -14,8 +14,8 @@ export class MyPlacePo extends BaseComponent{
         walkthroughPage.startButton.waitForDisplayed(500000);
         walkthroughPage.safeClick(walkthroughPage.startButton);
         questionnairePage.safeClick(questionnairePage.questionnaireSkipButton);
-        $('//*[contains(@text, "Privacy Policy")]').waitForDisplayed(40000);
-        $('//*[contains(@text, "Privacy Policy")]').click();
+        browser.pause(10000);
+        try{$('//*[contains(@text, "accept")]').click()} catch (e) {}
         upsellPage.safeClick(upsellPage.firstTrialClose);
         this.safeClick(this.userImg);
     }
