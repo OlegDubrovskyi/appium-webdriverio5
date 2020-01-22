@@ -4,7 +4,7 @@ import { SignUpPo} from '../support/signUp.po';
 import { LogInPo} from '../support/logIn.po';
 import { ProfilePo } from '../support/profile.po';
 
-describe('tests for login',  () => {
+fdescribe('tests for login',  () => {
     const myPlacePage = new MyPlacePo();
     const signUpPage = new SignUpPo();
     const alertPage = new AndroidAlertPo();
@@ -21,11 +21,12 @@ describe('tests for login',  () => {
     });
 
     it('Verify that user can login successfully from logIn form',  () => {
+        //logInPage.scrollToElement(signUpPage.goToLogInLink, 'down');
         logInPage.safeClick(signUpPage.goToLogInLink);
         logInPage.fillLogInpInputs('oleg.dubrovsky@valor-software.com', '1234');
         myPlacePage.safeClick(myPlacePage.userImg);
         profilePage.safeClick(profilePage.accountPage);
-        profilePage.assertElementContainsText(profilePage.accountUserEmail, 'oleg.dubrovsky@valor-software.com')
+        profilePage.assertElementContainsText(profilePage.accountUserEmail, 'oleg.dubrovsky@valor-software.com');
     });
 
     it('Verify that user can login successfully from signIn form',   () => {
@@ -34,6 +35,6 @@ describe('tests for login',  () => {
         alertPage.safeClick(alertPage.alertOk);
         myPlacePage.safeClick(myPlacePage.userImg);
         profilePage.safeClick(profilePage.accountPage);
-        profilePage.assertElementContainsText(profilePage.accountUserEmail, 'oleg.dubrovsky@valor-software.com')
+        profilePage.assertElementContainsText(profilePage.accountUserEmail, 'oleg.dubrovsky@valor-software.com');
     });
 });

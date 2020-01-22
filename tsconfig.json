@@ -21,6 +21,8 @@
   ],
 
   "include": [
-    "./integration/*.ts"
+    "./integration/*.ts",
+    "./support/*.ts",
+    "./helpers/*.ts"
   ]
 }

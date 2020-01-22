@@ -11,8 +11,11 @@ export class MyPlacePo extends BaseComponent{
     get userImg(): WebdriverIO.Element { return $('~userImg'); }
 
     openMyPlace() {
+        walkthroughPage.startButton.waitForDisplayed(500000);
         walkthroughPage.safeClick(walkthroughPage.startButton);
         questionnairePage.safeClick(questionnairePage.questionnaireSkipButton);
+        $('//*[contains(@text, "Privacy Policy")]').waitForDisplayed(40000);
+        $('//*[contains(@text, "Privacy Policy")]').click();
         upsellPage.safeClick(upsellPage.firstTrialClose);
         this.safeClick(this.userImg);
     }

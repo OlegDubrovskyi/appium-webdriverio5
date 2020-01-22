@@ -17,32 +17,46 @@ exports.config = {
 
     capabilities: [
         {
-            automationName: 'UiAutomator2',
-            appiumVersion: '1.14.1',
             platformName: 'Android',
-            platformVersion: '9',
-            app: './app-debug.apk',
+            platformVersion: '8.0',
+            appiumVersion: '1.15.1',
+            app: '/work/Projects/app-debug.apk',
             deviceName: 'emulator-5554',
             waitforTimeout: waitforTimeout,
             commandTimeout: commandTimeout,
             appWaitDuration: 30 * 60000,
-            dbExecTimeout: 30 * 60000,
-            androidInstallTimeout: 30 * 60000,
             newCommandTimeout: 60000,
             noReset: false,
-            fullReset: false,
+            fullReset: true,
             appWaitActivity: "com.tns.NativeScriptActivity",
             appActivity: 'com.tns.NativeScriptActivity',
             appPackage: 'com.Meditation.app',
             adbExecTimeout: 120000,
             avdLaunchTimeout: 30*300000,
             disableWindowAnimation: true
-        },
+        }
     ],
+
+
+    sync: true,
 
     reporters: ['spec'],
 
     services: ['appium'],
+
+    appium: {
+        waitStartTime: 6000,
+        waitforTimeout: waitforTimeout,
+        command: 'appium',
+        logFileName: './appium.log',
+        args: {
+            address: host,
+            port: port,
+            commandTimeout: commandTimeout,
+            sessionOverride: true,
+            debugLogSpacing: true
+        },
+    },
 
     logLevel: 'silent',
     coloredLogs: true,
@@ -52,12 +66,22 @@ exports.config = {
 
     framework: 'jasmine',
     jasmineNodeOpts: {
+        isVerbose: true,
         showColors: true,
-        defaultTimeoutInterval: 60000,
+        defaultTimeoutInterval: 700000,
+        expectationResultHandler: function(passed, assertion) {
+            if(passed) {
+                return;
+            }
+        },
+        grep: null,
+        invertGrep: null
     },
 
     before: function() {
-        require('ts-node').register({ files: true });
+        require('ts-node').register({
+            project: require('path').join(__dirname, './tsconfig.json')
+        });
     },
 
     onPrepare: function () {

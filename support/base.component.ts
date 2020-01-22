@@ -1,4 +1,4 @@
-const timeout = 10000;
+const timeout = 40000;
 
 export class BaseComponent {
     safeClick(element: WebdriverIO.Element) {
@@ -41,5 +41,49 @@ export class BaseComponent {
             // @ts-ignore
             {action: 'press', x: fromTo.from.x, y: fromTo.from.y}, {action: 'wait', ms: 1000}, {action: 'moveTo', x: fromTo.from.x, y: fromTo.to.y}, {action: 'release'}
         ]);
+    }
+
+    swipeFromTo(from, to) {
+        browser.touchPerform([{
+            action: 'press',
+            options: from,
+        }, {
+            action: 'wait',
+            options: { ms: 2000 },
+        }, {
+            action: 'moveTo',
+
+            options: to,
+        }, {
+            action: 'release',
+        }]);
+        browser.pause(1000);
+    }
+
+    scrollToElement(element: WebdriverIO.Element, direction) {
+        let from;
+        let to;
+        const windowSize: object = browser._getWindowSize();
+        switch (direction) {
+            case 'down':
+                // @ts-ignore
+                from = { x: windowSize.width * 0.5, y: windowSize.height * 0.5 };
+                // @ts-ignore
+                to = { x: windowSize.width * 0.5, y: windowSize.height * 0.37 };
+                break;
+            case 'top':
+                // @ts-ignore
+                from = { x: windowSize.width * 0.5, y: windowSize.height * 0.37 };
+                // @ts-ignore
+                to = { x: windowSize.width * 0.5, y: windowSize.height * 0.5 };
+                break;
+        }
+        for (let i = 0; i < 10; i++) {
+            const test: any = element.isDisplayed();
+            if (test === true) {
+                break;
+            }
+            this.swipeFromTo(from, to);
+        }
     }
 }
