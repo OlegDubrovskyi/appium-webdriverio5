@@ -4,7 +4,7 @@
   "scripts": {
     "appium": "appium",
     "build": "tsc -p ./tsconfig.json",
-    "e2e-tests": "wdio wdio.conf.js",
+    "e2e-tests": "wdio",
     "e2e-browserstack": "wdio browserstack.js"
   },
   "keywords": [],
@@ -28,6 +28,7 @@
     "typescript": "3.7.5",
     "wdio-appium-service": "0.2.3",
     "webdriverio": "5.18.6",
-    "browserstack-local": "1.4.4"
+    "browserstack-local": "1.4.4",
+    "wdio-browserstack-reporter": "0.1.1"
   }
 }
