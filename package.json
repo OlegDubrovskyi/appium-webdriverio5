@@ -28,7 +28,6 @@
     "typescript": "3.7.5",
     "wdio-appium-service": "0.2.3",
     "webdriverio": "5.18.6",
-    "node": "10.15.3",
     "browserstack-local": "1.4.4"
   }
 }
