@@ -14,10 +14,12 @@ export class MyPlacePo extends BaseComponent{
         walkthroughPage.startButton.waitForDisplayed(500000);
         walkthroughPage.safeClick(walkthroughPage.startButton);
         questionnairePage.safeClick(questionnairePage.questionnaireSkipButton);
-        browser.pause(15000);
+        browser.pause(20000);
         try{$('//*[contains(@text, "Accept")]').click()} catch (e) {}
         try{$('//*[contains(@text, "accept")]').click()} catch (e) {}
         upsellPage.safeClick(upsellPage.firstTrialClose);
+        browser.pause(4000);
+        try{upsellPage.firstTrialClose.click()} catch (e) {}
         this.safeClick(this.userImg);
     }
 }
