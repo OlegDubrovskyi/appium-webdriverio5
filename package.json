@@ -4,7 +4,7 @@
   "scripts": {
     "appium": "appium",
     "build": "tsc -p ./tsconfig.json",
-    "e2e-tests": "wdio",
+    "e2e-tests": "wdio wdio.conf.js",
     "e2e-browserstack": "wdio browserstack.js"
   },
   "keywords": [],
