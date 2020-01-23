@@ -8,7 +8,7 @@ exports.config = {
     specs: ['./integration/*.ts'],
 
     user: 'olegdubrovsky1',
-    key: 'NSigmYf9A5qGxsg6RPXx',
+    key: '                                                                                                                                        ',
 
     maxInstances: 1,
 
@@ -37,7 +37,12 @@ exports.config = {
 
     sync: true,
 
-    reporters: ['spec'],
+    reporters: ['browserstack'],
+    reporterOptions: {
+        browserstack: {
+            outputDir: './'
+        }
+    },
 
     framework: 'jasmine',
     jasmineNodeOpts: {
