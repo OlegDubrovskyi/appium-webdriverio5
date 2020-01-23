@@ -36,12 +36,11 @@ exports.config = {
 
     sync: true,
 
-    reporters: ['browserstack'],
-    reporterOptions: {
-        browserstack: {
-            outputDir: './'
-        }
-    },
+    reporters: [['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: true,
+    }]],
 
     framework: 'jasmine',
     jasmineNodeOpts: {
@@ -61,6 +60,12 @@ exports.config = {
         require('ts-node').register({
             project: require('path').join(__dirname, './tsconfig.json')
         });
+    },
+
+    after: function(test) {
+        if (test.error !== undefined) {
+            browser.takeScreenshot();
+        }
     },
 
     // Code to start browserstack local before start of test

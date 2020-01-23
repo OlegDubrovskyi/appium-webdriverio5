@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Jan 23 11:05:28 EET 2020","Thu Jan 23 11:06:11 EET 2020","43664","","tests for login","","tests for login","""before all"" hook","""before all"" hook",""
+"passed","Thu Jan 23 11:06:32 EET 2020","Thu Jan 23 11:06:55 EET 2020","22993","","tests for login","","tests for login","Verify that user can login successfully from signIn form","Verify that user can login successfully from signIn form",""
+"passed","Thu Jan 23 11:06:11 EET 2020","Thu Jan 23 11:06:32 EET 2020","20694","","tests for login","","tests for login","Verify that user can login successfully from logIn form","Verify that user can login successfully from logIn form",""

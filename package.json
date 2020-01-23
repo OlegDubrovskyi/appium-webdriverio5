@@ -29,6 +29,7 @@
     "wdio-appium-service": "0.2.3",
     "webdriverio": "5.18.6",
     "browserstack-local": "1.4.4",
-    "wdio-browserstack-reporter": "0.1.1"
+    "@wdio/allure-reporter": "5.18.6",
+    "allure-commandline": "2.13.0"
   }
 }

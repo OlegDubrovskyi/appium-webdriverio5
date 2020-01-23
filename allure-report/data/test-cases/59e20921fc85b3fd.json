@@ -1,0 +1,58 @@
+{
+  "uid" : "59e20921fc85b3fd",
+  "name" : "Verify that user can login successfully from signIn form",
+  "fullName" : "tests for login.Verify that user can login successfully from signIn form",
+  "historyId" : "fe67d77e4c83d35f30f27142d785188",
+  "time" : {
+    "start" : 1579770392396,
+    "stop" : 1579770415389,
+    "duration" : 22993
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "tests for login"
+  }, {
+    "name" : "testClass",
+    "value" : "tests for login"
+  }, {
+    "name" : "testMethod",
+    "value" : "Verify that user can login successfully from signIn form"
+  }, {
+    "name" : "package",
+    "value" : "tests for login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "samsung galaxy s9 plus-9.0"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "59e20921fc85b3fd.json",
+  "parameterValues" : [ "samsung galaxy s9 plus-9.0" ]
+}

@@ -1,0 +1,31 @@
+[ {
+  "uid" : "a9037459cf996879",
+  "name" : "Verify that user can login successfully from logIn form",
+  "time" : {
+    "start" : 1579770371701,
+    "stop" : 1579770392395,
+    "duration" : 20694
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "59e20921fc85b3fd",
+  "name" : "Verify that user can login successfully from signIn form",
+  "time" : {
+    "start" : 1579770392396,
+    "stop" : 1579770415389,
+    "duration" : 22993
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cbe5ba6c51540c8d",
+  "name" : "\"before all\" hook",
+  "time" : {
+    "start" : 1579770328036,
+    "stop" : 1579770371700,
+    "duration" : 43664
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

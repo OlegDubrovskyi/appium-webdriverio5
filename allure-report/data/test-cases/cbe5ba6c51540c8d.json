@@ -1,0 +1,58 @@
+{
+  "uid" : "cbe5ba6c51540c8d",
+  "name" : "\"before all\" hook",
+  "fullName" : "tests for login.\"before all\" hook",
+  "historyId" : "8c68c3925a9a91c3d77055d1f0ff0b21",
+  "time" : {
+    "start" : 1579770328036,
+    "stop" : 1579770371700,
+    "duration" : 43664
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "tests for login"
+  }, {
+    "name" : "testClass",
+    "value" : "tests for login"
+  }, {
+    "name" : "testMethod",
+    "value" : "\"before all\" hook"
+  }, {
+    "name" : "package",
+    "value" : "tests for login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "samsung galaxy s9 plus-9.0"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "cbe5ba6c51540c8d.json",
+  "parameterValues" : [ "samsung galaxy s9 plus-9.0" ]
+}

@@ -1,0 +1,48 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "tests for login",
+    "children" : [ {
+      "name" : "\"before all\" hook",
+      "uid" : "cbe5ba6c51540c8d",
+      "parentUid" : "c4ce49438b62779e8d9a6e46dc366479",
+      "status" : "passed",
+      "time" : {
+        "start" : 1579770328036,
+        "stop" : 1579770371700,
+        "duration" : 43664
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "samsung galaxy s9 plus-9.0" ]
+    }, {
+      "name" : "Verify that user can login successfully from logIn form",
+      "uid" : "a9037459cf996879",
+      "parentUid" : "c4ce49438b62779e8d9a6e46dc366479",
+      "status" : "passed",
+      "time" : {
+        "start" : 1579770371701,
+        "stop" : 1579770392395,
+        "duration" : 20694
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "samsung galaxy s9 plus-9.0" ]
+    }, {
+      "name" : "Verify that user can login successfully from signIn form",
+      "uid" : "59e20921fc85b3fd",
+      "parentUid" : "c4ce49438b62779e8d9a6e46dc366479",
+      "status" : "passed",
+      "time" : {
+        "start" : 1579770392396,
+        "stop" : 1579770415389,
+        "duration" : 22993
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "samsung galaxy s9 plus-9.0" ]
+    } ],
+    "uid" : "c4ce49438b62779e8d9a6e46dc366479"
+  } ]
+}
