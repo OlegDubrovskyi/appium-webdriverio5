@@ -8,7 +8,7 @@ exports.config = {
     specs: ['./integration/*.ts'],
 
     user: 'olegdubrovsky1',
-    key: 'NSigmYf9A5qGxsg6RPXx',                                                                                                                                      ',
+    key: 'NSigmYf9A5qGxsg6RPXx',                                                                                                                          ',
 
     maxInstances: 1,
 
