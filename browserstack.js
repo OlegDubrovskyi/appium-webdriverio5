@@ -1,4 +1,4 @@
-var browserstack = require('browserstack-local');
+var browserstack = require('@wdio/browserstack-service');
 
 exports.config = {
 
@@ -6,8 +6,10 @@ exports.config = {
     debug: true,
     specs: ['./integration/*.ts'],
 
-    user: 'olegdubrovsky1',
-    key: 'NSigmYf9A5qGxsg6RPXx',
+    services: ['browserstack'],
+    user: 'olegdubrovsky2',
+    key: '2cPHQsyENNqQppbAWuFy',
+    browserstackLocal: true,
 
     maxInstances: 1,
 
@@ -17,7 +19,7 @@ exports.config = {
         'browserstack.local': true,
         'device': 'Samsung Galaxy S9 Plus',
         'os_version': '9.0',
-        'app' : 'olegdubrovsky1/new_9',
+        'app' : 'olegdubrovsky2/new_9',
         'realMobile' : 'true',
         waitforTimeout: 30 * 60000,
         commandTimeout: 30 * 60000,
@@ -40,8 +42,12 @@ exports.config = {
         outputDir: 'allure-results',
         disableWebdriverStepsReporting: true,
         disableWebdriverScreenshotsReporting: true,
-    }],
-    ],
+    }],  "browserstack"],
+    reporterOptions: {
+        browserstack: {
+            outputDir: './'
+        }
+    },
 
     framework: 'jasmine',
     jasmineNodeOpts: {
