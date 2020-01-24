@@ -1,0 +1,79 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1579883298971' stop='1579883453755'>
+    <name>tests for login</name>
+    <title>tests for login</title>
+    <test-cases>
+        <test-case start='1579883298972' status='passed' stop='1579883343894'>
+            <name>"before all" hook</name>
+            <title>"before all" hook</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='samsung galaxy s9 plus-9.0'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1579883343895' status='passed' stop='1579883362407'>
+            <name>Verify that user can login successfully from logIn form</name>
+            <title>Verify that user can login successfully from logIn form</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='samsung galaxy s9 plus-9.0'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1579883362408' status='failed' stop='1579883453754'>
+            <name>Verify that user can login successfully from signIn form</name>
+            <title>Verify that user can login successfully from signIn form</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='samsung galaxy s9 plus-9.0'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>CompoundError: One or more errors occurred. ---
+                    Error: element ("//*[contains(@text, "Account")]") still not displayed after 40000ms
+                        at ProfilePo.safeClick (/work/Projects/appium-webdriverio5/support/base.component.ts:5:17)
+                        at UserContext.it (/work/Projects/appium-webdriverio5/integration/login.spec.ts:37:21)
+                --- End of stack trace ---
+                    Error: element ("~accountLogout") still not displayed after 40000ms
+                        at ProfilePo.safeClick (/work/Projects/appium-webdriverio5/support/base.component.ts:5:17)
+                        at UserContext.afterEach (/work/Projects/appium-webdriverio5/integration/login.spec.ts:19:21)
+                --- End of stack trace ---</message>
+                <stack-trace>Error: CompoundError: One or more errors occurred. ---
+                    Error: element ("//*[contains(@text, "Account")]") still not displayed after 40000ms
+                        at ProfilePo.safeClick (/work/Projects/appium-webdriverio5/support/base.component.ts:5:17)
+                        at UserContext.it (/work/Projects/appium-webdriverio5/integration/login.spec.ts:37:21)
+                --- End of stack trace ---
+                    Error: element ("~accountLogout") still not displayed after 40000ms
+                        at ProfilePo.safeClick (/work/Projects/appium-webdriverio5/support/base.component.ts:5:17)
+                        at UserContext.afterEach (/work/Projects/appium-webdriverio5/integration/login.spec.ts:19:21)
+                --- End of stack trace ---
+                    at getErrorFromFailedTest (/work/Projects/appium-webdriverio5/node_modules/@wdio/allure-reporter/build/utils.js:55:56)
+                    at AllureReporter.onTestFail (/work/Projects/appium-webdriverio5/node_modules/@wdio/allure-reporter/build/index.js:196:67)
+                    at AllureReporter.WDIOReporter.on.test (/work/Projects/appium-webdriverio5/node_modules/@wdio/reporter/build/index.js:115:12)
+                    at AllureReporter.emit (events.js:189:13)
+                    at AllureReporter.EventEmitter.emit (domain.js:441:20)
+                    at reporters.forEach.reporter (/work/Projects/appium-webdriverio5/node_modules/@wdio/runner/build/reporter.js:38:49)
+                    at Array.forEach (&lt;anonymous>)
+                    at BaseReporter.emit (/work/Projects/appium-webdriverio5/node_modules/@wdio/runner/build/reporter.js:38:20)
+                    at JasmineReporter.emit (/work/Projects/appium-webdriverio5/node_modules/@wdio/jasmine-framework/build/reporter.js:112:19)
+                    at JasmineReporter.specDone (/work/Projects/appium-webdriverio5/node_modules/@wdio/jasmine-framework/build/reporter.js:62:10)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

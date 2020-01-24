@@ -2,10 +2,10 @@
 <testsuites>
   <testsuite name="tests_for_login">
     <testcase name="Verify_that_user_can_login_successfully_from_logIn_form" id="tests_for_login.Verify_that_user_can_login_successfully_from_logIn_form{0}" index="0">
-      <session>b133af0dc9fb5c6a66dfbcbf84f8caa80fafdbd2</session>
+      <session>d0a7e23955d19a2c171b41bcf3b5305f2e76fa0a</session>
     </testcase>
     <testcase name="Verify_that_user_can_login_successfully_from_signIn_form" id="tests_for_login.Verify_that_user_can_login_successfully_from_signIn_form{0}" index="0">
-      <session>b133af0dc9fb5c6a66dfbcbf84f8caa80fafdbd2</session>
+      <session>d0a7e23955d19a2c171b41bcf3b5305f2e76fa0a</session>
     </testcase>
   </testsuite>
 </testsuites>

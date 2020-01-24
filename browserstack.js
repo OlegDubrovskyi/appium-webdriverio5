@@ -1,13 +1,15 @@
-var browserstack = require('browserstack-local');
+
+//var browserstack = require('browserstack-local');
 
 exports.config = {
 
     deprecationWarnings: false,
     debug: true,
     specs: ['./integration/*.ts'],
-
+    services: ['browserstack'],
     user: 'olegdubrovsky2',
     key: '2cPHQsyENNqQppbAWuFy',
+    //browserstackLocal: true,
 
     maxInstances: 1,
 
@@ -82,7 +84,7 @@ exports.config = {
     },
 
     // Code to stop browserstack local after end of test
-    onComplete: function (capabilties, specs) {
-        exports.bs_local.stop(function() {});
-    }
+    // onComplete: function (capabilties, specs) {
+    //     exports.bs_local.stop(function() {});
+    // }
 };
