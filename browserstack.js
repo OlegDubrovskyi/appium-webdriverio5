@@ -1,4 +1,4 @@
-var browserstack = require('@wdio/browserstack-service');
+var browserstack = require('browserstack-local');
 
 exports.config = {
 
@@ -6,10 +6,8 @@ exports.config = {
     debug: true,
     specs: ['./integration/*.ts'],
 
-    services: ['browserstack'],
     user: 'olegdubrovsky2',
     key: '2cPHQsyENNqQppbAWuFy',
-    browserstackLocal: true,
 
     maxInstances: 1,
 
