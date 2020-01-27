@@ -9,7 +9,7 @@ exports.config = {
     services: ['browserstack'],
     user: 'olegdubrovsky2',
     key: '2cPHQsyENNqQppbAWuFy',
-    //browserstackLocal: true,
+    browserstackLocal: true,
 
     maxInstances: 1,
 
