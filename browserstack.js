@@ -1,5 +1,5 @@
 
-//var browserstack = require('browserstack-local');
+var browserstack = require('browserstack-local');
 
 exports.config = {
 
@@ -9,7 +9,7 @@ exports.config = {
     services: ['browserstack'],
     user: 'olegdubrovsky2',
     key: '2cPHQsyENNqQppbAWuFy',
-    //browserstackLocal: true,
+    browserstackLocal: true,
 
     maxInstances: 1,
 

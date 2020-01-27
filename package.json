@@ -31,6 +31,7 @@
     "@wdio/allure-reporter": "5.18.6",
     "wdio-browserstack-reporter": "browserstack/wdio-browserstack-reporter#wdio5",
     "@wdio/browserstack-service": "5.18.1",
-    "wdio-browserstack-service": "0.1.19"
+    "wdio-browserstack-service": "0.1.19",
+    "browserstack-local": "1.4.5"
   }
 }

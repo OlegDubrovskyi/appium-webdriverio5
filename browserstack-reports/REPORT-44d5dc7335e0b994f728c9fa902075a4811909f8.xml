@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="tests_for_login">
+    <testcase name="Verify_that_user_can_login_successfully_from_logIn_form" id="tests_for_login.Verify_that_user_can_login_successfully_from_logIn_form{0}" index="0">
+      <session>44d5dc7335e0b994f728c9fa902075a4811909f8</session>
+    </testcase>
+    <testcase name="Verify_that_user_can_login_successfully_from_signIn_form" id="tests_for_login.Verify_that_user_can_login_successfully_from_signIn_form{0}" index="0">
+      <session>44d5dc7335e0b994f728c9fa902075a4811909f8</session>
+    </testcase>
+  </testsuite>
+</testsuites>
